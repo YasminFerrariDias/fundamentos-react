@@ -1,4 +1,5 @@
 import fotoPerfil from "../assets/perfil.jpg";
+import { Comment } from "./Comment";
 
 import styles from "./Post.module.css";
 
@@ -29,6 +30,9 @@ export function Post() {
           <a href="">jane.design/doctorcare</a>
         </p>
         <p>
+          j á tinha ouvido falar da Rocketseat, mas só fui conhecer de verdade quand 
+        </p>
+        <p>
           <a href="">#novoprojeto</a> <a href="">#nlw</a>{" "}
           <a href="">#rocketseat</a>
         </p>
@@ -36,14 +40,18 @@ export function Post() {
 
       <form className={styles.commentForm}>
         <strong>Deixe seu feedback</strong>
-        <textarea 
-          placeholder="Deixe um comentário"
-        />
-        
+        <textarea placeholder="Deixe um comentário" />
+
         <footer>
           <button type="submit">Publicar</button>
         </footer>
       </form>
+
+      <div className={styles.commentList}>
+        <Comment />
+        <Comment />
+        <Comment />
+      </div>
     </article>
   );
 }
