@@ -3,7 +3,7 @@ import fotoPerfil from "../assets/perfil.jpg";
 import { ThumbsUp, Trash } from "phosphor-react";
 import { Avatar } from "./avatar";
 
-export function Comment() {
+export function Comment({ content }) {
   return (
     <div className={styles.comment}>
       <Avatar hasBorder={false} src={fotoPerfil} />
@@ -13,21 +13,24 @@ export function Comment() {
           <header>
             <div className={styles.authorAndTime}>
               <strong>Yasmin Dias</strong>
-              <time title="11 de Maio ás 11:50" dateTime="2026-03-27 11:30:59">Cerca de 1h atrás</time>
+              <time title="11 de Maio ás 11:50" dateTime="2026-03-27 11:30:59">
+                Cerca de 1h atrás
+              </time>
             </div>
 
-            <button title="Deletar comentário"> 
+            <button title="Deletar comentário">
               <Trash size={24} />
             </button>
           </header>
 
-          <p>Muito bom Devon, parabens!</p>
+          <p>{content}</p>
         </div>
-        
+
         <footer>
           <button>
-          <ThumbsUp />
-          Aplaudir <span>20</span>
+            <ThumbsUp />
+            Aplaudir
+            <span>20</span>
           </button>
         </footer>
       </div>
