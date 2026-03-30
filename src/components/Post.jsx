@@ -1,4 +1,5 @@
 import fotoPerfil from "../assets/perfil.jpg";
+import { Avatar } from "./avatar";
 import { Comment } from "./Comment";
 
 import styles from "./Post.module.css";
@@ -8,7 +9,7 @@ export function Post() {
     <article className={styles.post}>
       <header>
         <div className={styles.author}>
-          <img className={styles.avatar} src={fotoPerfil} />
+          <Avatar hasBorder={true} src={fotoPerfil} />
           <div className={styles.authorInfo}>
             <strong>Yasmin Dias</strong>
             <span>Web Developer</span>
