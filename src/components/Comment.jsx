@@ -3,11 +3,11 @@ import fotoPerfil from "../assets/perfil.jpg";
 import { ThumbsUp, Trash } from "phosphor-react";
 import { Avatar } from "./avatar";
 
-export function Comment({ content, deleteComment }) {
+export function Comment({ content, onDeleteComment }) {
   function handleDeleteComment() {
     console.log("delete");
 
-    deleteComment(content);
+    onDeleteComment(content);
   }
 
   return (
